@@ -1476,7 +1476,7 @@ def main():
 
     if emission_file and boq_files:
         if st.button("Calculate Emissions", type="primary"):
-            with st.spinner("Processing files and calculating emissions..."):
+            with st.spinner("Processing files and calculating emissions...",show_time=True):
                 # FIX: Save the uploaded emission file to a temporary path before reading
                 with tempfile.NamedTemporaryFile(delete=False, suffix=".xlsx") as temp_emission_file:
                     temp_emission_file.write(emission_file.getvalue())
